@@ -28,8 +28,6 @@ class VideoRecorder:
         camera_config: Dict with optional keys:
             - cam_pos: np.ndarray, camera position [x, y, z]. Defaults to [0, -5, 3].
             - cam_target: np.ndarray, camera target [x, y, z]. Defaults to [0, 0, 0].
-            - track_obj_id: int, object ID to track (None for still camera).
-            - track_env_id: int, environment ID for tracking (default 0).
         resolution: Tuple (width, height) for the captured frames.
         fps: Frames per second for the output video.
     """
