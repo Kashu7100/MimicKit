@@ -71,6 +71,7 @@ python mimickit/run.py --mode train --num_envs 4096 --engine_config data/engines
 - `--visualize` enables visualization. Rendering should be disabled for faster training.
 - `--out_dir` the output directory where the models and logs will be saved.
 - `--logger` the logger used to record training stats. The options are TensorBoard `tb` or `wandb`.
+- `--video` enables headless video recording, which are logged to `wandb`. Can be `true` or `false`.
 
 Instead of specifying all arguments through the command line, arguments can also be loaded from an `arg_file`:
 ```

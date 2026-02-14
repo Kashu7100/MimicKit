@@ -1197,11 +1197,6 @@ class IsaacLabEngine(engine.Engine):
         return
 
     def _build_video_recorder(self):
-        """Create the video recorder with optional camera configuration.
-        
-        Args:
-            camera_config: Optional camera config dict. If None, uses defaults.
-        """
         timestep = self.get_timestep()
         fps = int(np.round(1.0 / timestep))
         self._video_recorder = isaac_lab_recorder.IsaacLabVideoRecorder(self, fps=fps)
