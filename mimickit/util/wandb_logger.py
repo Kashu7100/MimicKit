@@ -1,3 +1,4 @@
+import numbers
 import os
 import tempfile
 import wandb
@@ -59,8 +60,10 @@ class WandbLogger(logger.Logger):
                     
                     if (isinstance(val, video.Video)):
                         out_videos[tag] = val
-                    else:
+                    elif (isinstance(entry.val, numbers.Number)):
                         out_dict[tag] = val
+                    else:
+                        assert(False), "Unsupported WandB value type: {}".format(type(val))
 
             step_val = self._get_step_val()
             wandb.log(out_dict, step=int(step_val))

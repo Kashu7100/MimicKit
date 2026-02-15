@@ -1,8 +1,10 @@
 import numbers
+import numpy as np
 import os
 import tensorboardX
 
 import util.logger as logger
+import util.video as video
 
 class TBLogger(logger.Logger):
     MISC_TAG = "Misc"
@@ -54,8 +56,12 @@ class TBLogger(logger.Logger):
                     val = entry.val
                     tag = self._key_tags[i]
 
-                    if (isinstance(entry.val, numbers.Number)):
+                    if (isinstance(val, video.Video)):
+                        self._write_video(tag, val, step_val)
+                    elif (isinstance(entry.val, numbers.Number)):
                         self._writer.add_scalar(tag, val, step_val)
+                    else:
+                        assert(False), "Unsupported Tensorboard value type: {}".format(type(val))
         return
     
     def _add_collection(self, name, key):
@@ -76,3 +82,13 @@ class TBLogger(logger.Logger):
             tags.append(curr_tags)
 
         return tags
+    
+    def _write_video(self, tag, video, step_val):
+        fps = video.get_fps()
+        frames = video.get_frames()
+        frames = np.array(frames)
+        frames = frames.transpose(0, 3, 1, 2)
+        frames = np.expand_dims(frames, axis=0)
+
+        self._writer.add_video(tag, frames, step_val, fps)
+        return
