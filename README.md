@@ -104,6 +104,7 @@ More detailed instructions for each method are available here:
 - [DeepMimic](docs/README_DeepMimic.md)
 - [AMP - Adversarial Motion Priors](docs/README_AMP.md)
 - [ASE - Adversarial Skill Embeddings](docs/README_ASE.md)
+- [AWR - Advantage-Weighted Regression](docs/README_AWR.md)
 - [ADD - Adversarial Differential Discriminator](docs/README_ADD.md)
 
 
