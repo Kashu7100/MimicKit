@@ -1,6 +1,6 @@
 try:
     import isaacgym.gymapi as gymapi
-except:
+except ImportError:
     pass
 
 def build_engine(config, num_envs, device, visualize, record_video=False):

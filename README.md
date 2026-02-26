@@ -8,15 +8,13 @@
 
 This framework provides a suite of motion imitation methods for training motion controllers. This codebase is designed to be clean and lightweight, with minimal dependencies. A more detailed overview of MimicKit is available in the [Starter Guide](https://arxiv.org/abs/2510.13794). For a more feature-rich and modular motion imitation framework, checkout [ProtoMotions](https://github.com/NVlabs/ProtoMotions/). 
 
-This codebase includes implementations of:
-- [DeepMimic](https://xbpeng.github.io/projects/DeepMimic/index.html)
-- [AMP - Adversarial Motion Priors](https://xbpeng.github.io/projects/AMP/index.html)
-- [ASE - Adversarial Skill Embeddings](https://xbpeng.github.io/projects/ASE/index.html)
-- [ADD - Adversarial Differential Discriminator](https://xbpeng.github.io/projects/ADD/index.html)
-
-We also include the following RL algorithms:
-- [PPO - Proximal Policy Optimization](https://arxiv.org/abs/1707.06347)
-- [AWR - Advantage-Weighted Regression](https://xbpeng.github.io/projects/AWR/index.html)
+Instructions for each method are available here:
+- [DeepMimic](docs/README_DeepMimic.md)
+- [AMP - Adversarial Motion Priors](docs/README_AMP.md)
+- [AWR - Advantage-Weighted Regression](docs/README_AWR.md)
+- [ASE - Adversarial Skill Embeddings](docs/README_ASE.md)
+- [LCP - Lipschitz-Constrained Policies](docs/README_LCP.md)
+- [ADD - Adversarial Differential Discriminator](docs/README_ADD.md)
 
 ---
 
@@ -96,16 +94,6 @@ To use distributed training with multi-CPU or multi-GPU:
 python mimickit/run.py --arg_file args/deepmimic_humanoid_ppo_args.txt --devices cuda:0 cuda:1
 ``` 
 - `--devices` specifies the devices used for training, which can be `cpu` or `cuda:{i}`. Multiple devices can be provided to parallelize training across multiple processes.
-
-
-## Methods
-
-More detailed instructions for each method are available here:
-- [DeepMimic](docs/README_DeepMimic.md)
-- [AMP - Adversarial Motion Priors](docs/README_AMP.md)
-- [ASE - Adversarial Skill Embeddings](docs/README_ASE.md)
-- [AWR - Advantage-Weighted Regression](docs/README_AWR.md)
-- [ADD - Adversarial Differential Discriminator](docs/README_ADD.md)
 
 
 ## Visualizer UI
