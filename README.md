@@ -20,8 +20,9 @@ Instructions for each method are available here:
 
 ## Installation
 
-This framework supports different simulator backends (referred to as `Engines`). First, install the simulator of your choice. We highly recommend using a package manager, like [Conda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html), to create dedicated Python environments for each simulator.
+This framework supports different simulator backends (referred to as `Engines`). We highly recommend using a package manager, like [Conda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html), to create dedicated Python environments for each simulator.
 
+1. Install the simulator of your choice. 
 <details>
 <summary>Isaac Gym</summary>
 
@@ -46,11 +47,12 @@ Install [Newton](https://newton-physics.github.io/newton/guide/installation.html
 To use Newton, specify the argument `--engine_config data/engines/newton_engine.yaml` when running the code. This framework has been tested with `510f16b4c83ee662c03325c2a960a924e0b5f03e`.
 </details>
 
-After that, install the requirements:
+2. Install the requirements.
 ```
 pip install -r requirements.txt
 ```
-Download assets and motion data from [here](https://1sfu-my.sharepoint.com/:u:/g/personal/xbpeng_sfu_ca/EclKq9pwdOBAl-17SogfMW0Bved4sodZBQ_5eZCiz9O--w?e=bqXBaa), then extract the contents into [`data/`](data/).
+
+3. Download assets and motion data from [here](https://1sfu-my.sharepoint.com/:u:/g/personal/xbpeng_sfu_ca/EclKq9pwdOBAl-17SogfMW0Bved4sodZBQ_5eZCiz9O--w?e=bqXBaa), then extract the contents into [`data/`](data/).
 
 
 ---
